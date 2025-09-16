@@ -1,59 +1,93 @@
-# Jobs
+# jobs
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
+**jobs** is a microfrontend Angular application built with [Angular CLI](https://github.com/angular/angular-cli) **v20.0.0**.  
+It is designed to be consumed as a remote module in a larger host application using **Webpack Module Federation**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Development Server
+
+To start the local development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to [http://localhost:4200/](http://localhost:4200/) in your browser.  
+The app will auto-reload when you modify source files.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Code Scaffolding
+
+Generate new components, services, or other Angular constructs with:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+For a full list of schematics (components, directives, pipes, etc.):
 
 ```bash
 ng generate --help
 ```
 
-## Building
+---
 
-To build the project run:
+## 📦 Building
+
+Run the following to build the project:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The build artifacts will be stored in the `dist/` directory.  
+By default, the build is optimized for production performance.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🧪 Running Unit Tests
+
+Run unit tests with [Karma](https://karma-runner.github.io):
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🌐 Running End-to-End Tests
+
+For e2e tests, run:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+> Note: Angular CLI does not ship with an e2e framework by default.  
+> You may integrate **Cypress** or **Playwright** depending on your project needs.
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🔗 Module Federation Setup
+
+This project is configured as a **remote** microfrontend exposing modules for integration:
+
+- **Remote name:** `jobs`  
+- **Entry file:** `remoteEntry.js`  
+- **Exposed modules:**  
+  - `./Component` → `src/app/app.ts`
+
+Update your **host** application’s `webpack.config.js` to consume these remotes.
+
+---
+
+## 📚 Additional Resources
+
+- [Angular CLI Documentation](https://angular.dev/tools/cli)  
+- [Angular Module Federation Guide](https://www.angulararchitects.io/en/guide/module-federation/)  
+
+---
+
+⚡ Ready to plug into your host app and scale!  
